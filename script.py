@@ -22,5 +22,9 @@ ebay_returns = get_returns(ebay_prices)
 
 #Calculate the annual rate of return
 amazon_annual = display_as_percentage(sum(amazon_returns))
-
 ebay_annual = display_as_percentage(sum(ebay_returns))
+
+#Calculate variance
+amazon_variance = calculate_variance(amazon_returns)
+ebay_variance = calculate_variance(ebay_returns)
+
