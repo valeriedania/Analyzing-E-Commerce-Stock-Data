@@ -12,3 +12,10 @@ def get_returns(prices):
   for i in range(0, prices + 1):
     returns.append(calculate_log_return(i))
   return returns
+
+amazon_returns = get_returns(amazon_prices)
+ebay_returns = get_returns(ebay_prices)
+
+#Print returns as percentage
+print(display_as_percentage(amazon_returns))
+print(display_as_percentage(ebay_returns))
