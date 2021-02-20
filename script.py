@@ -17,5 +17,10 @@ amazon_returns = get_returns(amazon_prices)
 ebay_returns = get_returns(ebay_prices)
 
 #Print returns as percentage
-print(display_as_percentage(amazon_returns))
-print(display_as_percentage(ebay_returns))
+[display_as_percentage(i) for i in amazon_returns]
+[display_as_percentage(j) for j in ebay_returns]
+
+#Calculate the annual rate of return
+amazon_annual = display_as_percentage(sum(amazon_returns))
+
+ebay_annual = display_as_percentage(sum(ebay_returns))
