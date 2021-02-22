@@ -16,7 +16,7 @@ ebay_returns = get_returns(ebay_prices)
 
 #Print returns as percentage
 amazon_percentages = [display_as_percentage(i) for i in amazon_returns]
-ebay_percentages = [display_as_percentage(j) for j in ebay_returns)
+ebay_percentages = [display_as_percentage(j) for j in ebay_returns]
 print(amazon_percentages)  
 print(ebay_percentages) 
                     
@@ -33,6 +33,5 @@ amazon_stddev = display_as_percentage(calculate_stddev(amazon_returns))
 ebay_stddev = display_as_percentage(calculate_stddev(ebay_returns))
 
 #Calculate correlation coefficient
-correlation = 
-calculate_correlation(amazon_returns, ebay_returns)
+correlation = calculate_correlation(amazon_returns, ebay_returns)
      
