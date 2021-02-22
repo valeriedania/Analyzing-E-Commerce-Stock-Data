@@ -9,7 +9,7 @@ ebay_prices = [35.98, 33.2, 34.35, 32.77, 28.81, 29.62, 27.86, 33.39, 37.01, 37.
 
 #Calculate rate of return
 def get_returns(prices):
-  returns = [calculate_log_return(i) for i in prices]
+  returns = [calculate_log_return(i, i+1) for i in prices]
 
 amazon_returns = get_returns(amazon_prices)
 ebay_returns = get_returns(ebay_prices)
