@@ -17,9 +17,9 @@ amazon_returns = get_returns(amazon_prices)
 ebay_returns = get_returns(ebay_prices)
 
 #Print returns as percentage
-[display_as_percentage(i) for i in amazon_returns]
-[display_as_percentage(j) for j in ebay_returns]
-
+print([display_as_percentage(i) for i in amazon_returns])
+print([display_as_percentage(j) for j in ebay_returns)
+     
 #Calculate the annual rate of return
 amazon_annual = display_as_percentage(sum(amazon_returns))
 ebay_annual = display_as_percentage(sum(ebay_returns))
@@ -28,3 +28,6 @@ ebay_annual = display_as_percentage(sum(ebay_returns))
 amazon_variance = calculate_variance(amazon_returns)
 ebay_variance = calculate_variance(ebay_returns)
 
+#Calculate standard deviance
+amazon_stddev = display_as_percentage(calculate_stddev(amazon))
+ebay_stddev = display_as_percentage(calculate_stddev(ebay))
