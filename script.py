@@ -9,7 +9,11 @@ ebay_prices = [35.98, 33.2, 34.35, 32.77, 28.81, 29.62, 27.86, 33.39, 37.01, 37.
 
 #Calculate rate of return
 def get_returns(prices):
-  returns = [calculate_log_return(i, i+1) for i in prices]
+  returns = []
+  for i in range(len(prices)-1):
+    log_return = calculate_log_return(prices[i], prices[i + 1])
+    returns.append(log_return)
+  return returns
 
 amazon_returns = get_returns(amazon_prices)
 ebay_returns = get_returns(ebay_prices)
@@ -17,6 +21,7 @@ ebay_returns = get_returns(ebay_prices)
 #Print returns as percentage
 amazon_percentages = [display_as_percentage(i) for i in amazon_returns]
 ebay_percentages = [display_as_percentage(j) for j in ebay_returns]
+
 print(amazon_percentages)  
 print(ebay_percentages) 
                     
