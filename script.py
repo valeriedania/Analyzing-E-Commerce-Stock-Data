@@ -29,3 +29,8 @@ ebay_variance = calculate_variance(ebay_returns)
 #Calculate standard deviance
 amazon_stddev = display_as_percentage(calculate_stddev(amazon))
 ebay_stddev = display_as_percentage(calculate_stddev(ebay))
+
+#Calculate correlation coefficient
+correlation = 
+calculate_correlation(amazon_returns, ebay_returns)
+     
